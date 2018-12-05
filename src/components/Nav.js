@@ -15,9 +15,9 @@ class Nav extends Component {
               <FontAwesomeIcon className="Nav-burger" icon={faBars} size="lg" color="#282c34"/>
             </div>
             <ul className="Nav-items">
-              <li><Link className="Nav-item" to='/about'>about</Link></li>
-              <li><Link className="Nav-item" to='/experience'>experience</Link></li>
-              <li><Link className="Nav-item" to='/contact'>contact</Link></li>
+              <li><Link className="Nav-item" to='/about'>About</Link></li>
+              <li><Link className="Nav-item" to='/experience'>Experience</Link></li>
+              <li><Link className="Nav-item" to='/contact'>Contact</Link></li>
             </ul>
           </div>
         </div>
