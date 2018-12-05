@@ -17,11 +17,12 @@ class SideDrawer extends Component {
           <FontAwesomeIcon icon={faTimes} size="2x" color="#282c34"/>
         </div>
         <ul className="SideDrawer-items">
-          <li><Link className="SideDrawer-item" onClick={this.props.action.click} to='/about'>about</Link></li>
-          <li className="SideDrawer-item-spacer"/>
-          <li><Link className="SideDrawer-item" onClick={this.props.action.click} to='/experience'>experience</Link></li>
-          <li className="SideDrawer-item-spacer"/>
-          <li><Link className="SideDrawer-item" onClick={this.props.action.click} to='/contact'>contact</Link></li>
+          <li><Link className="SideDrawer-item" onClick={this.props.action.click} to='/about'>About</Link></li>
+          <li className="SideDrawer-item-spacer"></li>
+          <li><Link className="SideDrawer-item" onClick={this.props.action.click} to='/experience'>Experience</Link></li>
+          <li className="SideDrawer-item-spacer"></li>
+          <li><Link className="SideDrawer-item" onClick={this.props.action.click} to='/contact'>Contact</Link></li>
+          <li className="SideDrawer-item-spacer"></li>
         </ul>
       </div>
     );

@@ -8,11 +8,17 @@
   align-items: center;
 }
 
-.Contact-entries {
+.Contact-content {
   margin: 0;
   padding: 0;
   padding-top: 10rem;
   padding-bottom: 2rem;
+}
+
+.Contact-entries {
+  margin: 0;
+  padding: 1rem;
+  border: 2px solid #282c34;
 }
 
 .Contact-entry {
@@ -47,7 +53,7 @@
 }
 
 @media screen and (max-width: 999px) {
-  .Contact-entries {
+  .Contact-content {
     padding-top: 8rem;
   }
 }

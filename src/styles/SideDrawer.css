@@ -54,5 +54,8 @@
 }
 
 .SideDrawer-item-spacer {
+  margin: 0.2rem;
+  padding: 0;
   height: 1.2rem;
+  border-top: 2px solid #282c34;
 }

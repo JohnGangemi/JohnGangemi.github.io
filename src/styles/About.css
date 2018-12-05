@@ -23,9 +23,10 @@
 
 .About-detail {
   margin: 0;
-  padding: 0;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
   max-width: 50%;
+  border: 2px solid #282c34;
 }
 
 .About-detail p {
