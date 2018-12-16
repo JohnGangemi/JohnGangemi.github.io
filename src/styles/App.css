@@ -1,12 +1,39 @@
 .App {
-/* #20232a,
-   #282c34,
-   #61dafb */
-
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   text-align: center;
   background-color: #FFF;
+}
+
+.App-image {
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  height: 16rem;
+  width: inherit;
+  background-color: #DDD;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cpu {
+  background-image: url('../images/cpu_hq.jpg');
+}
+
+.keyboard {
+  background-image: url('../images/keyboard_hq.jpg');
+}
+
+.working {
+  background-image: url('../images/working_hq.jpg');
+}
+
+@media screen and (max-width: 999px) {
+  .App-image {
+    height: 8rem;
+  }
 }

@@ -4,10 +4,10 @@ import '../styles/Experience.css';
 class Experience extends Component {
   render() {
     return(
-      <div className="Experience">
+      <div className="Experience" id="experience">
         <div className="Experience-entries">
           <div className="Experience-entry">
-            <p className="Experience-title">SRI International</p>
+            <p className="Experience-title">SRI International, 2016 - Present</p>
             <div className="Experience-description">
               <p>
                 Software Engineer in Advanced Technology & Science Division of SRI
@@ -26,7 +26,7 @@ class Experience extends Component {
           </div>
           <div className="Experience-entry-spacer"/>
           <div className="Experience-entry">
-            <p className="Experience-title">Bankers Financial Corporation</p>
+            <p className="Experience-title">Bankers Financial Corporation, 2015</p>
             <div className="Experience-description">
               <p>
                 Developed a version control utility to track individual contributor
@@ -38,7 +38,7 @@ class Experience extends Component {
           </div>
           <div className="Experience-entry-spacer"/>
           <div className="Experience-entry">
-            <p className="Experience-title">Undergraduate Research</p>
+            <p className="Experience-title">Undergraduate Research, 2015</p>
             <div className="Experience-description">
               <p>
                 Researched the design and synthesis of combinational feedback logic

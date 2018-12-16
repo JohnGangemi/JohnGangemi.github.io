@@ -9,7 +9,6 @@
   z-index: 300;
   background-color: #FFF;
   color: #282c34;
-  box-shadow: 4px 0px 6px grey;
 
   display: flex;
   flex-direction: column;
@@ -20,6 +19,7 @@
 
 .SideDrawer-open {
   transform: translateX(0);
+  box-shadow: 4px 0px 6px grey;
 }
 
 .SideDrawer-close {
@@ -28,6 +28,7 @@
   margin-left: auto;
   padding: 0;
   cursor: pointer;
+  box-shadow: 0;
 }
 
 .SideDrawer-items {

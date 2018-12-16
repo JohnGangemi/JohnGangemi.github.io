@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 200;
   width: 100%;
   height: 4rem;
   overflow: hidden;
@@ -29,7 +30,7 @@
 }
 
 .Nav-logo {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 900;
   text-decoration: none;
   color: inherit;
@@ -51,7 +52,7 @@
 }
 
 .Nav-item {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: normal;
   text-decoration: none;
   color: inherit;
@@ -68,7 +69,7 @@
 
 @media screen and (max-width: 999px) {
   .Nav-logo {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .Nav-items {

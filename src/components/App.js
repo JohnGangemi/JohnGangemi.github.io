@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
 import Nav from '../components/Nav.js';
 import Home from '../components/Home.js';
 import About from '../components/About.js';
@@ -39,14 +38,15 @@ class App extends Component {
     return (
       <div className="App">
         <Nav burgerClick={this.sideDrawerToggle}/>
-        <SideDrawer action={{click: this.sideDrawerClose, visible: this.state.isSideDrawerOpen}} />
+        <SideDrawer action={{close: this.sideDrawerClose, visible: this.state.isSideDrawerOpen}} />
         {dimRender}
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route path='/about' component={About}/>
-          <Route path='/experience' component={Experience}/>
-          <Route path='/contact' component={Contact}/>
-        </Switch>
+        <Home/>
+        <div className="App-image cpu"/>
+        <About/>
+        <div className="App-image keyboard"/>
+        <Experience/>
+        <div className="App-image working"/>
+        <Contact/>
       </div>
     );
   }
