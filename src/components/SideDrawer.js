@@ -12,17 +12,16 @@ class SideDrawer extends Component {
 
     return(
       <div className={sideDrawerStyles}>
-        <div className="SideDrawer-close" onClick={this.props.action.close}>
-          <FontAwesomeIcon icon={faTimes} size="lg" color="#282c34"/>
+        <div className="SideDrawer-content">
+          <div className="SideDrawer-close" onClick={this.props.action.close}>
+            <FontAwesomeIcon icon={faTimes} size="2x" color="#EEE"/>
+          </div>
+          <ul className="SideDrawer-items">
+            <li><a className="SideDrawer-item" onClick={this.props.action.close} href='#about'>About</a></li>
+            <li><a className="SideDrawer-item" onClick={this.props.action.close} href='#experience'>Experience</a></li>
+            <li><a className="SideDrawer-item" onClick={this.props.action.close} href='#contact'>Contact</a></li>
+          </ul>
         </div>
-        <ul className="SideDrawer-items">
-          <li><a className="SideDrawer-item" onClick={this.props.action.close} href='#about'>About</a></li>
-          <li className="SideDrawer-item-spacer"></li>
-          <li><a className="SideDrawer-item" onClick={this.props.action.close} href='#experience'>Experience</a></li>
-          <li className="SideDrawer-item-spacer"></li>
-          <li><a className="SideDrawer-item" onClick={this.props.action.close} href='#contact'>Contact</a></li>
-          <li className="SideDrawer-item-spacer"></li>
-        </ul>
       </div>
     );
   }

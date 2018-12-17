@@ -5,7 +5,6 @@ import About from '../components/About.js';
 import Experience from '../components/Experience.js';
 import Contact from '../components/Contact.js';
 import SideDrawer from '../components/SideDrawer.js';
-import Dim from '../components/Dim.js';
 import '../styles/App.css';
 
 class App extends Component {
@@ -30,16 +29,10 @@ class App extends Component {
   }
 
   render() {
-    let dimRender;
-    if (this.state.isSideDrawerOpen) {
-      dimRender = <Dim close={this.sideDrawerClose}/>
-    }
-
     return (
       <div className="App">
         <Nav burgerClick={this.sideDrawerToggle}/>
         <SideDrawer action={{close: this.sideDrawerClose, visible: this.state.isSideDrawerOpen}} />
-        {dimRender}
         <Home/>
         <div className="App-image cpu"/>
         <About/>

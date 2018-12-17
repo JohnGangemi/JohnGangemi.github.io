@@ -1,45 +1,49 @@
 .SideDrawer {
   margin: 0;
   padding: 0;
-  padding-right: 2rem;
-  padding-left: 2rem;
   height: 100%;
-  width:  40%;
+  width: 100%;
   position: fixed;
   z-index: 300;
-  background-color: #FFF;
-  color: #282c34;
+  background-color: #282c34;
+  color: #EEE;
+
+  transform: translateX(200%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.SideDrawer-content {
+  margin: 0;
+  padding: 0;
 
   display: flex;
   flex-direction: column;
-
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-out;
 }
 
 .SideDrawer-open {
-  transform: translateX(0);
-  box-shadow: 4px 0px 6px grey;
+  transform: translateX(0%);
 }
 
 .SideDrawer-close {
   margin: 0;
-  margin-top: 1rem;
-  margin-left: auto;
   padding: 0;
+  padding: 2rem;
   cursor: pointer;
-  box-shadow: 0;
 }
 
 .SideDrawer-items {
   margin: 0;
   padding: 0;
-  padding-top: 4rem;
+  padding-top: 2rem;
   list-style: none;
-  text-align: left;
+  text-align: center;
 
   display: flex;
   flex-direction: column;
+}
+
+.SideDrawer-items li {
+  margin-bottom: 2rem;
 }
 
 .SideDrawer-item {
@@ -47,16 +51,10 @@
   font-weight: normal;
   text-decoration: none;
   color: inherit;
+  border-bottom: 2px solid #EEE;
 }
 
 .SideDrawer-item:hover,
 .SideDrawer-item:active {
   color: #61dafb;
-}
-
-.SideDrawer-item-spacer {
-  margin: 0.2rem;
-  padding: 0;
-  height: 1.2rem;
-  border-top: 2px solid #282c34;
 }
