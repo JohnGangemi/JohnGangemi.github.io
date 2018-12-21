@@ -6,7 +6,6 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
   color: #282c34;
-  box-shadow: 0px 0px 6px 0px grey;
 
   display: flex;
   flex-direction: column;
@@ -24,12 +23,9 @@
 }
 
 .Experience-entry {
-  max-width: 50%;
-  /* padding: 2rem; */
+  max-width: 40%;
   text-align: left;
   font-size: 1rem;
-  background-color: #FFF;
-  /* border: 2px solid #282c34; */
 }
 
 .Experience-entry p {
@@ -55,6 +51,13 @@
 
 @media screen and (max-width: 999px) {
   .Experience-entry {
-    max-width: 75%;
+    max-width: 85%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
+
+  .Experience-entry {
+    max-width: 60%;
   }
 }

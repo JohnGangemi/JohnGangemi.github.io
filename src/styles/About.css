@@ -6,7 +6,6 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
   color: #282c34;
-  box-shadow: 0px 0px 6px 0px grey;
 }
 
 .About-content {
@@ -45,7 +44,7 @@
 }
 
 .About-extra-visible {
-  max-width: calc(50% - 4rem);
+  max-width: calc(40% - 4rem);
   padding: 0;
   margin: 0;
   margin-top: 4rem;
@@ -56,7 +55,7 @@
 }
 
 .About-text {
-  max-width: 50%;
+  max-width: 40%;
   padding: 0;
   margin: 0;
   margin-top: 4rem;
@@ -139,7 +138,7 @@
       box-shadow: 0;
     }
     10% {
-      box-shadow: 0px 0px 0px 2px #61dafb;
+      box-shadow: 0px 0px 0px 2px #71C2FF;
     }
     15% {
       box-shadow: none;
@@ -158,10 +157,21 @@
   }
 
   .About-text {
-    max-width: 75%;
+    max-width: 85%;
   }
 
   .About-extra-visible {
-    max-width: calc(75% - 4rem);
+    max-width: calc(85% - 4rem);
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
+
+  .About-text {
+    max-width: 60%;
+  }
+
+  .About-extra-visible {
+    max-width: calc(60% - 4rem);
   }
 }

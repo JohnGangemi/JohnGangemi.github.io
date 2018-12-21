@@ -61,7 +61,7 @@ class About extends Component {
 
   render() {
     return(
-      <div className="About" id="about">
+      <div className="About">
         <div className="About-content">
           <div className="About-images">
             <div className="About-image laptop"  onClick={this.setLaptopText} />

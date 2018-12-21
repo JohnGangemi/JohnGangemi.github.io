@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { Element } from 'react-scroll'
 import Nav from '../components/Nav.js';
 import Home from '../components/Home.js';
 import About from '../components/About.js';
 import Experience from '../components/Experience.js';
 import Contact from '../components/Contact.js';
 import SideDrawer from '../components/SideDrawer.js';
+import Footer from '../components/Footer.js';
 import '../styles/App.css';
 
 class App extends Component {
@@ -29,17 +31,21 @@ class App extends Component {
   }
 
   render() {
+    function AppContact(props) {
+      return (<Element name="scroll-to-contact"><div className="App-image working"/><Contact/></Element>);
+    }
+
     return (
       <div className="App">
         <Nav burgerClick={this.sideDrawerToggle}/>
         <SideDrawer action={{close: this.sideDrawerClose, visible: this.state.isSideDrawerOpen}} />
-        <Home/>
+        <Element name="scroll-to-home"><Home/></Element>
         <div className="App-image cpu"/>
-        <About/>
+        <Element name="scroll-to-about"><About/></Element>
         <div className="App-image keyboard"/>
-        <Experience/>
-        <div className="App-image working"/>
-        <Contact/>
+        <Element name="scroll-to-experience"><Experience/></Element>
+        <AppContact/>
+        <Footer/>
       </div>
     );
   }

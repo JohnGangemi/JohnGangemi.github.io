@@ -5,13 +5,8 @@ import '../styles/SideDrawer.css';
 
 class SideDrawer extends Component {
   render() {
-    let sideDrawerStyles = 'SideDrawer';
-    if (this.props.action.visible) {
-      sideDrawerStyles = 'SideDrawer SideDrawer-open';
-    }
-
     return(
-      <div className={sideDrawerStyles}>
+      <div className={this.props.action.visible ? 'SideDrawer SideDrawer-open' : 'SideDrawer'}>
         <div className="SideDrawer-content">
           <div className="SideDrawer-close" onClick={this.props.action.close}>
             <FontAwesomeIcon icon={faTimes} size="2x" color="#EEE"/>

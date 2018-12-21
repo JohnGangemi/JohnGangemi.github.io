@@ -17,23 +17,35 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .cpu {
-  background-image: url('../images/cpu_lq.jpg');
+  background-image: url('../images/cpu_hq.jpg');
 }
 
 .keyboard {
-  background-image: url('../images/keyboard_lq.jpg');
+  background-image: url('../images/keyboard_hq.jpg');
 }
 
 .working {
-  background-image: url('../images/working_lq.jpg');
+  background-image: url('../images/working_hq.jpg');
 }
 
 @media screen and (max-width: 999px) {
   .App-image {
     height: 8rem;
+  }
+
+  .cpu {
+    background-image: url('../images/cpu_lq.jpg');
+  }
+
+  .keyboard {
+    background-image: url('../images/keyboard_lq.jpg');
+  }
+
+  .working {
+    background-image: url('../images/working_lq.jpg');
   }
 }

@@ -6,7 +6,6 @@
   padding: 0;
   padding-top: 6rem;
   padding-bottom: 6rem;
-  box-shadow: 0px 0px 6px 0px grey;
 
   display: flex;
   flex-direction: column;
@@ -21,9 +20,7 @@
 
 .Contact-entries {
   margin: 0;
-  /* padding: 2rem; */
   background-color: #FFF;
-  /* border: 2px solid #282c34; */
 }
 
 .Contact-entry {
@@ -46,7 +43,7 @@
 
 .Contact-description a {
   text-decoration: none;
-  color: #61dafb;
+  color: #71C2FF;
 }
 
 .Contact-entry-spacer {
