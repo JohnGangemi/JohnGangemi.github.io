@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Element } from 'react-scroll'
+import { Element } from 'react-scroll';
+import { Parallax } from 'react-parallax';
 import Nav from '../components/Nav.js';
 import Home from '../components/Home.js';
 import About from '../components/About.js';
@@ -32,7 +33,15 @@ class App extends Component {
 
   render() {
     function AppContact(props) {
-      return (<Element name="scroll-to-contact"><div className="App-image working"/><Contact/></Element>);
+      return (
+        <Element name="scroll-to-contact">
+          <Parallax className="App-image"
+            bgImage={require('../images/working_hq.jpg')}
+            bgImageAlt="cpu"
+            strength={400}>
+          </Parallax>
+          <Contact/>
+        </Element>);
     }
 
     return (
@@ -40,9 +49,17 @@ class App extends Component {
         <Nav burgerClick={this.sideDrawerToggle}/>
         <SideDrawer action={{close: this.sideDrawerClose, visible: this.state.isSideDrawerOpen}} />
         <Element name="scroll-to-home"><Home/></Element>
-        <div className="App-image cpu"/>
+        <Parallax className="App-image"
+          bgImage={require('../images/cpu_hq.jpg')}
+          bgImageAlt="cpu"
+          strength={400}>
+        </Parallax>
         <Element name="scroll-to-about"><About/></Element>
-        <div className="App-image keyboard"/>
+        <Parallax className="App-image"
+          bgImage={require('../images/keyboard_hq.jpg')}
+          bgImageAlt="cpu"
+          strength={400}>
+        </Parallax>
         <Element name="scroll-to-experience"><Experience/></Element>
         <AppContact/>
         <Footer/>
