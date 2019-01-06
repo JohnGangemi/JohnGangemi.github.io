@@ -1,65 +1,25 @@
 import React, { Component } from 'react';
-import { Link, scrollSpy } from 'react-scroll'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import '../styles/Nav.css';
 
 class Nav extends Component {
-  componentDidMount() {
-    scrollSpy.update();
-  }
-
   render() {
     return(
-      <nav className="Nav">
-        <div className="Nav-content">
-          <Link className="Nav-logo"
-            to="scroll-to-home"
-            spy={true}
-            smooth={true}
-            duration={1000}>
-              John Gangemi
-          </Link>
-          <div>
-            <div onClick={this.props.burgerClick}>
-              <FontAwesomeIcon className="Nav-burger" icon={faBars} size="lg" color="#EEE"/>
-            </div>
-            <ul className="Nav-items">
-              <li>
-                <Link className="Nav-item"
-                  to="scroll-to-about"
-                  activeClass="activated"
-                  spy={true}
-                  smooth={true}
-                  duration={1000}
-                  isDynamic={true}>
-                    About
-                </Link>
-              </li>
-              <li>
-                <Link className="Nav-item"
-                  to="scroll-to-experience"
-                  activeClass="activated"
-                  spy={true}
-                  smooth={true}
-                  duration={1000}>
-                    Experience
-                </Link>
-              </li>
-              <li>
-                <Link className="Nav-item"
-                  to="scroll-to-contact"
-                  activeClass="activated"
-                  spy={true}
-                  smooth={true}
-                  duration={1000}>
-                    Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+      <div className="Nav">
+        <ul className="Nav-items">
+          <li><NavLink exact to='/' activeClassName="nav-active" className="Nav-item">home</NavLink></li>
+          <li><NavLink to='/about' activeClassName="nav-active" className="Nav-item">about</NavLink></li>
+          <li><NavLink to='/resume' activeClassName="nav-active" className="Nav-item">resume</NavLink></li>
+          <li><NavLink to='/projects' activeClassName="nav-active" className="Nav-item">projects</NavLink></li>
+          <li><NavLink to='/contact' activeClassName="nav-active" className="Nav-item">contact</NavLink></li>
+        </ul>
+        <div className="Nav-responsive" onClick={this.props.burger}>
+          <FontAwesomeIcon className="Nav-icon" icon={faChevronDown} size="lg" color="rgb(40,40,40)"/>
+          menu
         </div>
-      </nav>
+      </div>
     );
   }
 }

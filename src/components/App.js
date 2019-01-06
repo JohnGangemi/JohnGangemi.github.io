@@ -1,68 +1,48 @@
 import React, { Component } from 'react';
-import { Element } from 'react-scroll';
-import { Parallax } from 'react-parallax';
+import {Switch, Route, Redirect} from 'react-router-dom';
 import Nav from '../components/Nav.js';
 import Home from '../components/Home.js';
 import About from '../components/About.js';
-import Experience from '../components/Experience.js';
+import Resume from '../components/Resume.js';
+import Projects from '../components/Projects.js';
 import Contact from '../components/Contact.js';
-import SideDrawer from '../components/SideDrawer.js';
-import Footer from '../components/Footer.js';
+import Menu from '../components/Menu.js';
 import '../styles/App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isSideDrawerOpen: false
+      isMenuOpen: false
     };
 
-    this.sideDrawerToggle = this.sideDrawerToggle.bind(this);
-    this.sideDrawerClose = this.sideDrawerClose.bind(this);
+    this.menuToogle = this.menuToogle.bind(this);
+    this.menuClose = this.menuClose.bind(this);
   }
 
-  sideDrawerToggle() {
+  menuToogle() {
     this.setState(state => ({
-      isSideDrawerOpen: !state.isSideDrawerOpen
+      isMenuOpen: !state.isMenuOpen
     }));
   }
 
-  sideDrawerClose() {
-    this.setState({isSideDrawerOpen: false});
+  menuClose() {
+    this.setState({isMenuOpen: false});
   }
 
   render() {
-    function AppContact(props) {
-      return (
-        <Element name="scroll-to-contact">
-          <Parallax className="App-image"
-            bgImage={require('../images/working_hq.jpg')}
-            bgImageAlt="cpu"
-            strength={400}>
-          </Parallax>
-          <Contact/>
-        </Element>);
-    }
-
     return (
       <div className="App">
-        <Nav burgerClick={this.sideDrawerToggle}/>
-        <SideDrawer action={{close: this.sideDrawerClose, visible: this.state.isSideDrawerOpen}} />
-        <Element name="scroll-to-home"><Home/></Element>
-        <Parallax className="App-image"
-          bgImage={require('../images/cpu_hq.jpg')}
-          bgImageAlt="cpu"
-          strength={400}>
-        </Parallax>
-        <Element name="scroll-to-about"><About/></Element>
-        <Parallax className="App-image"
-          bgImage={require('../images/keyboard_hq.jpg')}
-          bgImageAlt="cpu"
-          strength={400}>
-        </Parallax>
-        <Element name="scroll-to-experience"><Experience/></Element>
-        <AppContact/>
-        <Footer/>
+        <Nav burger={this.menuToogle} />
+        <Menu action={{close: this.menuClose, open: this.state.isMenuOpen}} />
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/about" component={About}/>
+          <Route path="/resume" component={Resume}/>
+          <Route path="/projects" component={Projects}/>
+          <Route path="/contact" component={Contact}/>
+          <Redirect to="/"/>
+        </Switch>
       </div>
     );
   }

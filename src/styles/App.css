@@ -1,43 +1,16 @@
 .App {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  background-color: #FFF;
-}
+  color: var(--main-font-color);
 
-.App-image {
-  height: 24rem;
-  width: inherit;
-}
-
-.cpu {
-  background-image: url('../images/cpu_hq.jpg');
-}
-
-.keyboard {
-  background-image: url('../images/keyboard_hq.jpg');
-}
-
-.working {
-  background-image: url('../images/working_hq.jpg');
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". content .";
 }
 
 @media screen and (max-width: 999px) {
-  .App-image {
-    height: 16rem;
-  }
-
-  .cpu {
-    background-image: url('../images/cpu_lq.jpg');
-  }
-
-  .keyboard {
-    background-image: url('../images/keyboard_lq.jpg');
-  }
-
-  .working {
-    background-image: url('../images/working_lq.jpg');
+  .App {
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-areas: ". content .";
   }
 }

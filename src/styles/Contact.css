@@ -1,49 +1,56 @@
 .Contact {
-  color: #282c34;
-  margin: 0;
-  padding: 0;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.Contact-content {
-  margin: 0;
-  padding: 0;
-}
-
-.Contact-entries {
-  margin: 0;
-  background-color: #FFF;
-}
-
-.Contact-entry {
-  text-align: left;
-  font-size: 1rem;
-}
-
-.Contact-entry p {
-  margin: 0;
-  padding: 0;
-}
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    color: inherit;
+    grid-area: content;
+  }
 
 .Contact-title {
-  font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-size: var(--main-font-size);
+    font-weight: 700;
+    color: inherit;
+}
+
+.Contact-text {
+    margin: 0;
+    padding: 0;
+    font-size: var(--main-font-size);
+    color: inherit;
 }
 
 .Contact-description {
-  font-weight: normal;
+    margin: 0;
+    margin-top: 0.5rem;
+    padding: 0;
+    font-size: var(--main-font-size);
+    color: inherit;
 }
 
-.Contact-description a {
-  text-decoration: none;
-  color: #71C2FF;
+.Contact-link {
+    margin: 0;
+    margin-top: 0.5rem;
+    padding: 0;
+    text-decoration: none;
+    font-size: var(--main-font-size);
+    color: var(--active-font-color);
 }
 
-.Contact-entry-spacer {
-  height: 2rem;
+.Contact-link:hover {
+    box-shadow: 0 2px 0 0 var(--active-font-color);
+    transition: box-shadow 0.4s;
 }
+
+.Contact-spacer-vertical {
+    height: 2rem;
+}
+
+@media screen and (max-width: 999px) {
+    .Contact {
+      padding-top: 6rem;
+    }
+  }

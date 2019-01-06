@@ -1,0 +1,30 @@
+.Card {
+    margin: 0;
+    padding: 0.5rem;
+    width: 200px;
+    background-color: #FFF;
+    box-shadow: 4px 4px 8px var(--shadow-color);
+}
+
+.Card-image {
+    margin: 0;
+    padding: 0;
+    width: inherit;
+}
+
+.Card-title {
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    font-size: var(--min-font-size);
+    font-weight: 700;
+    color: var(--main-font-color);
+}
+
+.Card-description {
+    margin: 0;
+    margin-top: 0.5rem;
+    padding: 0;
+    font-size: var(--min-font-size);
+    color: var(--main-font-color);
+}

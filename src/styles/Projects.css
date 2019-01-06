@@ -1,4 +1,4 @@
-.About {
+.Projects {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -6,19 +6,9 @@
   padding-bottom: 2rem;
   color: inherit;
   grid-area: content;
-
 }
 
-.About-text {
-  margin: 0;
-  padding: 0;
-  font-size: var(--main-font-size);
-  color: inherit;
-}
-
-.About-cards {
-  margin-top: 4rem;
-
+.Projects-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -28,11 +18,11 @@
 }
 
 @media screen and (max-width: 999px) {
-  .About {
+  .Projects {
     padding-top: 6rem;
   }
 
-  .About-cards {
+  .Projects-cards {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;

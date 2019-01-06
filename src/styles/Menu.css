@@ -1,0 +1,68 @@
+.Menu {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 300;
+  background-color: var(--main-font-color);
+  color: rgb(240, 240, 240);
+
+  transform: translateY(-200%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.Menu-content {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Menu-open {
+  transform: translateY(0%);
+}
+
+.Menu-close {
+  margin: 0;
+  padding: 0;
+  padding: 2rem;
+  font-size: var(--nav-font-size);
+  letter-spacing: var(--main-letter-space);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.Menu-close > svg {
+  margin-right: 1.5rem;
+}
+
+.Menu-items {
+  margin: 0;
+  padding: 0;
+  padding-top: 2rem;
+  list-style: none;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.Menu-items li {
+  margin-bottom: 2rem;
+}
+
+.Menu-item {
+  font-size: var(--nav-font-size);
+  letter-spacing: var(--main-letter-space);
+  text-decoration: none;
+  color: inherit;
+}
+
+.Menu-item:hover,
+.Menu-item:active {
+  color: var(--active-font-color);
+}

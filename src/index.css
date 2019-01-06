@@ -1,14 +1,31 @@
+/* CSS Vars */
+:root {
+  --main-font-color: rgb(40,40,40);
+  --active-font-color: rgb(63, 137, 205);
+  --nav-font-size: 1rem;
+  --home-title-font-size: 3.4rem;
+  --home-description-font-size: 1.2rem;
+  --main-font-size: 1rem;
+  --min-font-size: 0.9rem;
+  --main-letter-space: 0.2rem;
+  --main-bg-color: rgb(235, 235, 235);
+  --shadow-color: rgb(190, 190, 190);
+}
+/* END CSS Vars */
+
 html {
   height: 100%;
   width: 100%;
+  background-color: var(--main-bg-color);
 }
 
 body {
+  overflow-y: scroll;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,9 +35,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-#root {
-  height: 100%;
-  width: 100%;
 }

@@ -1,0 +1,10 @@
+.ProgressBar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--shadow-color);
+}
+
+.ProgressBar-fill {
+    height: 2px;
+    background-color: var(--active-font-color);
+}
