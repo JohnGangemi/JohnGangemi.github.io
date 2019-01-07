@@ -66,29 +66,33 @@
     "image";
 
     grid-column-gap: 0;
-    grid-row-gap: 4rem;
+    grid-row-gap: 1rem;
   }
 
   .Home-content {
-    max-width: 315px;
+    max-width: 290px;
     align-self: end;
     justify-self: center;
   }
 
   .Home-image {
-    height: 300px;
-    width: 300px;
-    align-self: start;
+    height: 250px;
+    width: 250px;
+    align-self: center;
     justify-self: center;
   }
 
   .Home-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 800;
     text-shadow: none;
   }
 
+  .Home-description {
+    margin-top: 1rem;
+  }
+
   .Home-description > p {
-    font-size: var(--main-font-six);
+    font-size: var(--min-font-size);
   }
 }
