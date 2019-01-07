@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   color: inherit;
-  /* background-image: linear-gradient(to bottom right, rgb(242, 242, 242), rgb(200, 200, 200)); */
+  background-image: linear-gradient(to bottom right, rgb(242, 242, 242), rgb(200, 200, 200));
   grid-column-start: span 3;
   
   display: grid;
@@ -85,6 +85,7 @@
   .Home-title {
     font-size: 2rem;
     font-weight: 800;
+    text-shadow: none;
   }
 
   .Home-description > p {

@@ -26,14 +26,18 @@
 }
 
 .Menu-close {
+  width: 100%;
   margin: 0;
   padding: 0;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   font-size: var(--nav-font-size);
   letter-spacing: var(--main-letter-space);
   cursor: pointer;
+
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .Menu-close > svg {
@@ -41,9 +45,10 @@
 }
 
 .Menu-items {
+  width: 100%;
   margin: 0;
+  margin-top: 1rem;
   padding: 0;
-  padding-top: 2rem;
   list-style: none;
   text-align: center;
 
@@ -52,10 +57,17 @@
 }
 
 .Menu-items li {
-  margin-bottom: 2rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .Menu-item {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: var(--nav-font-size);
   letter-spacing: var(--main-letter-space);
   text-decoration: none;
@@ -65,4 +77,10 @@
 .Menu-item:hover,
 .Menu-item:active {
   color: var(--active-font-color);
+}
+
+.menu-active {
+  font-weight: 600;
+  color: var(--main-font-color);
+  background-color: var(--shadow-color);
 }

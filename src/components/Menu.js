@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import '../styles/Menu.css';
@@ -14,11 +14,11 @@ class Menu extends Component {
             close
           </div>
           <ul className="Menu-items">
-            <li><Link className="Menu-item" onClick={this.props.action.close} to='/home'>home</Link></li>
-            <li><Link className="Menu-item" onClick={this.props.action.close} to='/about'>about</Link></li>
-            <li><Link className="Menu-item" onClick={this.props.action.close} to='/resume'>resume</Link></li>
-            <li><Link className="Menu-item" onClick={this.props.action.close} to='/projects'>projects</Link></li>
-            <li><Link className="Menu-item" onClick={this.props.action.close} to='/contact'>contact</Link></li>
+            <li><NavLink exact to='/' className="Menu-item" activeClassName="menu-active" onClick={this.props.action.close} >home</NavLink></li>
+            <li><NavLink to='/about' className="Menu-item" activeClassName="menu-active" onClick={this.props.action.close} >about</NavLink></li>
+            <li><NavLink to='/resume' className="Menu-item" activeClassName="menu-active" onClick={this.props.action.close} >resume</NavLink></li>
+            <li><NavLink to='/projects' className="Menu-item" activeClassName="menu-active" onClick={this.props.action.close} >projects</NavLink></li>
+            <li><NavLink to='/contact' className="Menu-item" activeClassName="menu-active" onClick={this.props.action.close} >contact</NavLink></li>
           </ul>
         </div>
       </div>
