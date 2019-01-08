@@ -27,11 +27,22 @@
   column-gap: 2rem;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1199px) {
   .About {
     padding-top: 6rem;
   }
 
+  .About-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 625px) {
   .About-cards {
     display: grid;
     grid-template-columns: 1fr;

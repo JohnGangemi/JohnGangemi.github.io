@@ -1,7 +1,8 @@
 .Home {
-  height: 100vh;
+  height: calc(100vh - 4rem);
   margin: 0;
   padding: 0;
+  padding-top: 4rem;
   color: inherit;
   background-image: linear-gradient(to bottom right, rgb(242, 242, 242), rgb(200, 200, 200));
   grid-column-start: span 3;
@@ -57,7 +58,7 @@
   transition: color 0.4s;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1199px) {
   .Home {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: 1fr;
@@ -66,18 +67,46 @@
     "image";
 
     grid-column-gap: 0;
-    grid-row-gap: 1rem;
   }
 
   .Home-content {
-    max-width: 290px;
-    align-self: end;
+    max-width: 375px;
+    align-self: center;
     justify-self: center;
   }
 
   .Home-image {
-    height: 250px;
-    width: 250px;
+    height: 325px;
+    width: 325px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .Home-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-shadow: none;
+  }
+
+  .Home-description {
+    margin-top: 1.5rem;
+  }
+
+  .Home-description > p {
+    font-size: var(--main-font-size);
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .Home-content {
+    max-width: 300px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .Home-image {
+    height: 275px;
+    width: 275px;
     align-self: center;
     justify-self: center;
   }

@@ -17,11 +17,22 @@
   column-gap: 2rem;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1199px) {
   .Projects {
     padding-top: 6rem;
   }
 
+  .Projects-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 625px) {
   .Projects-cards {
     display: grid;
     grid-template-columns: 1fr;

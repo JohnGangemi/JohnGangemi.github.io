@@ -43,7 +43,7 @@ class Resume extends Component {
                     web technologies and advanced analytics platforms. Maintaining legacy systems and 
                     radar/sensor connectors. Assisted in architecture design of various software frameworks 
                     related to company intellectual property.
-                
+                    <br/><br/>
                     Participated in Internal Research and Development programs, Off-site technical demonstrations 
                     and client support, proposal acquisitions and proposal submissions, and white paper development.
                 </p>

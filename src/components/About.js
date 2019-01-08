@@ -13,10 +13,11 @@ class About extends Component {
           A passion for engineering and technology stems from a
           life-long background in music. Interaction with complex software
           and hardware systems on a daily basis as a Recording Engineer
-          encouraged the pursuit of another career path. Once enrolled into
-          the University of South Florida, I obtained a B.S. in Computer
-          Engineering after four exhausting but rewarding years of hard
-          work and determination.
+          encouraged the pursuit of another career path. 
+          <br/><br/>
+          Once enrolled into the University of South Florida, I obtained a B.S. 
+          in Computer Engineering after four exhausting but rewarding years of 
+          hard work and determination.
         </p>
         <div className="About-cards">
           <Card card={{image: laptop, imageAlt: "laptop", title: "Programmer", description: "Honing skills through personal software and hardware projects."}} />            

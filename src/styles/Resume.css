@@ -28,7 +28,7 @@
   height: 2rem;
 }
   
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1199px) {
   .Resume {
     padding-top: 6rem;
   }
