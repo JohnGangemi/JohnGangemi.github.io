@@ -29,12 +29,6 @@
     color: var(--main-font-color);
 }
 
-@media screen and (max-width: 1199px) {
-    .Card {
-        width: 300px;
-    }
-}
-
 @media screen and (max-width: 799px) {
     .Card {
         width: 225px;

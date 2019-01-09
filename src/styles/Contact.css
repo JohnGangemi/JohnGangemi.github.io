@@ -1,5 +1,5 @@
 .Contact {
-    width: 100%;
+    width: 800px;
     margin: 0;
     padding: 0;
     padding-top: 8rem;
@@ -51,6 +51,18 @@
 
 @media screen and (max-width: 1199px) {
     .Contact {
-      padding-top: 6rem;
+      max-width: 600px;
     }
-  }
+}
+
+@media screen and (max-width: 799px) {
+    .Contact {
+      max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .Contact {
+      max-width: 300px;
+    }
+}

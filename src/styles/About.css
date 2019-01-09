@@ -1,12 +1,10 @@
 .About {
-  width: 100%;
+  width: 800px;
   margin: 0;
   padding: 0;
   padding-top: 8rem;
   padding-bottom: 2rem;
   color: inherit;
-  grid-area: content;
-
 }
 
 .About-text {
@@ -20,8 +18,7 @@
   margin-top: 4rem;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
   row-gap: 2rem;
   column-gap: 2rem;
@@ -29,26 +26,22 @@
 
 @media screen and (max-width: 1199px) {
   .About {
-    padding-top: 6rem;
-  }
-
-  .About-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    justify-items: center;
-    row-gap: 2rem;
-    column-gap: 2rem;
+    max-width: 600px;
   }
 }
 
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 799px) {
+  .About {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .About {
+    max-width: 300px;
+  }
+
   .About-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    justify-items: center;
-    row-gap: 2rem;
-    column-gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   }
 }

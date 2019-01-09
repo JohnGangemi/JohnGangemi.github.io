@@ -1,23 +1,10 @@
 .App {
+  width: 100%;
   margin: 0;
   padding: 0;
   color: var(--main-font-color);
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: ". content .";
-}
-
-@media screen and (max-width: 1199px) {
-  .App {
-    grid-template-columns: 0.4fr 1fr 0.4fr;
-    grid-template-areas: ". content .";
-  }
-}
-
-@media screen and (max-width: 625px) {
-  .App {
-    grid-template-columns: 0.1fr 1fr 0.1fr;
-    grid-template-areas: ". content .";
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
