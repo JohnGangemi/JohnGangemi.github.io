@@ -7,7 +7,7 @@
     color: var(--nav-active-font-color);
     background-color: var(--main-font-color);
     box-shadow: none;
-    transform: translateX(-18.5rem);
+    transform: translateX(-20rem);
     transition: all 0.5s ease-in-out;
     display: flex;
 }
@@ -18,7 +18,7 @@
 }
 
 .Music-content {
-    width: 18.5rem;
+    width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
