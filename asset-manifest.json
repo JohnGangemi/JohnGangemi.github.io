@@ -1,9 +1,9 @@
 {
-  "main.css": "/static/css/main.74d87f86.chunk.css",
-  "main.js": "/static/js/main.7f72c606.chunk.js",
-  "main.js.map": "/static/js/main.7f72c606.chunk.js.map",
-  "static/js/1.4f3fcd09.chunk.js": "/static/js/1.4f3fcd09.chunk.js",
-  "static/js/1.4f3fcd09.chunk.js.map": "/static/js/1.4f3fcd09.chunk.js.map",
+  "main.css": "/static/css/main.23b9fbe2.chunk.css",
+  "main.js": "/static/js/main.9c49e1f0.chunk.js",
+  "main.js.map": "/static/js/main.9c49e1f0.chunk.js.map",
+  "static/js/1.dae7a42e.chunk.js": "/static/js/1.dae7a42e.chunk.js",
+  "static/js/1.dae7a42e.chunk.js.map": "/static/js/1.dae7a42e.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/computer-components.png": "/static/media/computer-components.8ac64bb3.png",
@@ -17,8 +17,8 @@
   "static/media/audio.jpg": "/static/media/audio.38b1930e.jpg",
   "static/media/app.jpg": "/static/media/app.02f160d5.jpg",
   "static/media/laptop.jpg": "/static/media/laptop.f82fb86d.jpg",
-  "static/css/main.74d87f86.chunk.css.map": "/static/css/main.74d87f86.chunk.css.map",
+  "static/css/main.23b9fbe2.chunk.css.map": "/static/css/main.23b9fbe2.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.f052f4d9ac8d3b1f58760257bcb51575.js": "/precache-manifest.f052f4d9ac8d3b1f58760257bcb51575.js",
+  "precache-manifest.a78181f10c5623c9e789dd38705ac7b5.js": "/precache-manifest.a78181f10c5623c9e789dd38705ac7b5.js",
   "service-worker.js": "/service-worker.js"
 }
