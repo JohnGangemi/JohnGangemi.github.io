@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../components/Card.js';
+import Avatar from '../images/avatar-center.png';
 import laptop from '../images/laptop.jpg';
 import strat from '../images/strat.jpg';
 import ram from '../images/ram.jpg';
@@ -9,6 +10,9 @@ class About extends Component {
   render() {
     return(
       <div className="About" id="about">
+        <div className="About-images">
+          <img className="About-avatar" src={Avatar} alt="avatar"/>
+        </div>
         <p className="About-text">
           A passion for engineering and technology stems from a
           life-long background in music. Interaction with complex software

@@ -1,6 +1,7 @@
 /* CSS Vars */
 :root {
   --main-font-color: rgb(40,40,40);
+  --nav-active-font-color: rgb(240, 240, 240);
   --active-font-color: rgb(63, 137, 205);
   --nav-font-size: 1rem;
   --home-title-font-size: 3.4rem;
@@ -9,19 +10,18 @@
   --min-font-size: 0.9rem;
   --main-letter-space: 0.2rem;
   --main-bg-color: rgb(235, 235, 235);
+  --nav-hover-color: rgb(210, 210, 210);
   --shadow-color: rgb(190, 190, 190);
+  --card-background-color: #FFF;
 }
 /* END CSS Vars */
 
 html {
-  height: 100%;
   width: 100%;
-  background-color: var(--main-bg-color);
 }
 
 body {
   overflow-y: scroll;
-  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;

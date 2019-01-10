@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0.5rem;
     width: 200px;
-    background-color: #FFF;
+    background-color: var(--card-background-color);
     box-shadow: 4px 4px 8px var(--shadow-color);
 }
 

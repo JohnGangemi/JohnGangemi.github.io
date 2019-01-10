@@ -1,0 +1,72 @@
+.Theme {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 6rem;
+    color: var(--nav-active-font-color);
+    background-color: var(--main-font-color);
+    box-shadow: none;
+    transform: translateX(-7rem);
+    transition: all 0.5s ease-in-out;
+    display: flex;
+}
+
+.show-theme {
+    transform: translateX(0%);
+    box-shadow: 8px 0px 0px 0px var(--shadow-color);
+}
+
+.Theme-options {
+    height: inherit;
+    width: 6rem;
+    padding-left: 1rem;
+    font-size: var(--nav-font-size);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Theme-option {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.Theme-option-select {
+    box-sizing: border-box;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    background-color: var(--nav-active-font-color);
+}
+
+.active-option .Theme-option-select {
+    background-color: var(--active-font-color);
+    border: 4px solid var(--nav-active-font-color);
+}
+
+.option-spacer {
+    height: 1rem;
+}
+
+.Theme-bumper {
+    height: inherit;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Theme-icon {
+    margin: 0;
+    padding: 0;
+    color: var(--nav-active-font-color);
+}

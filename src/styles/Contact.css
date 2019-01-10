@@ -1,4 +1,5 @@
 .Contact {
+    min-height: calc(100vh - 10rem);
     width: 800px;
     margin: 0;
     padding: 0;

@@ -52,6 +52,10 @@
   margin-right: 1rem;
 }
 
+.Home-icon {
+  color: var(--main-font-color);
+}
+
 .Home-icon:hover {
   color: var(--active-font-color);
   transition: color 0.4s;

@@ -15,9 +15,11 @@ class Nav extends Component {
           <li><NavLink to='/projects' activeClassName="nav-active" className="Nav-item">projects</NavLink></li>
           <li><NavLink to='/contact' activeClassName="nav-active" className="Nav-item">contact</NavLink></li>
         </ul>
-        <div className="Nav-responsive" onClick={this.props.burger}>
-          <FontAwesomeIcon className="Nav-icon" icon={faChevronDown} size="lg" color="rgb(40,40,40)"/>
-          menu
+        <div className="Nav-responsive-wrapper">
+          <div className="Nav-responsive" onClick={this.props.burger}>
+            <FontAwesomeIcon className="Nav-icon" icon={faChevronDown} size="lg"/>
+            menu
+          </div>
         </div>
       </div>
     );

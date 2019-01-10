@@ -3,8 +3,29 @@
   margin: 0;
   padding: 0;
   color: var(--main-font-color);
+  background-color: var(--main-bg-color);
 
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.dark {
+  --main-font-color: rgb(205, 205, 205);
+  --nav-active-font-color: rgb(60, 60, 60);
+  --active-font-color: rgb(72, 125, 175);
+  --main-bg-color: rgb(80, 80, 80);
+  --nav-hover-color: rgb(60, 60, 60);
+  --shadow-color: rgb(40, 40, 40);
+  --card-background-color: rgb(60, 60, 60);
+}
+
+.light {
+  --main-font-color: rgb(40,40,40);
+  --nav-active-font-color: rgb(240, 240, 240);
+  --active-font-color: rgb(63, 137, 205);
+  --main-bg-color: rgb(235, 235, 235);
+  --nav-hover-color: rgb(210, 210, 210);
+  --shadow-color: rgb(190, 190, 190);
+  --card-background-color: #FFF;
 }

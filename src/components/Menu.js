@@ -10,7 +10,7 @@ class Menu extends Component {
       <div className={this.props.action.open ? 'Menu Menu-open' : 'Menu'}>
         <div className="Menu-content">
           <div className="Menu-close" onClick={this.props.action.close}>
-            <FontAwesomeIcon icon={faTimes} size="2x" color="rgb(240, 240, 240)"/>
+            <FontAwesomeIcon className="Menu-icon" icon={faTimes} size="2x" />
             close
           </div>
           <ul className="Menu-items">

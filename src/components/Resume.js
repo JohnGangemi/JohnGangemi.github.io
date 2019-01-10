@@ -1,42 +1,13 @@
 import React, { Component } from 'react';
-import ProgressBar from '../components/ProgressBar.js';
 import '../styles/Resume.css';
 
 class Resume extends Component {
-    constructor(props) {
-        super(props);
-        this.ref = React.createRef();
-        this.state = {
-            contentWidth: 0
-        }
-
-        this.setContentWidth = this.setContentWidth.bind(this);
-    }
-    
-    componentDidMount() {
-        this.setContentWidth();
-        window.addEventListener("resize", this.setContentWidth);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.setContentWidth);
-    }
-
-    setContentWidth() {
-        this.setState({
-            contentWidth: this.ref.current.clientWidth
-        })
-    }
-
     render() {
-        const currentContentWidth = this.state.contentWidth;
-        const contentDivisionWidth = currentContentWidth / 3;
-
         return(
             <div className="Resume" id="Resume" ref={this.ref}>
                 <div className="Resume-detail">
                     <p className="Resume-title">SRI International, 2016 - Present</p>
-                    <ProgressBar fill={contentDivisionWidth}/>
+                    <div className="Resume-hr"/>
                     <p className="Resume-description">
                         Software Engineer in Advanced Technology and Science Division of SRI International. 
                         Supporting all aspects of web services in an agile environment utilizing the latest 
@@ -51,7 +22,7 @@ class Resume extends Component {
                 <div className="Resume-spacer-vertical"/>
                 <div className="Resume-detail">
                     <p className="Resume-title">Bankers Financial Corporation, 2015</p>
-                    <ProgressBar fill={contentDivisionWidth * 2}/>
+                    <div className="Resume-hr"/>
                     <p className="Resume-description">
                         Developed a version control utility to track individual contributor stats for Bankers IT 
                         department using C# and Windows Forms framework. Assisted in the redesign and development of 
@@ -61,7 +32,7 @@ class Resume extends Component {
                 <div className="Resume-spacer-vertical"/>
                 <div className="Resume-detail">
                     <p className="Resume-title">Undergraduate Research, 2015</p>
-                    <ProgressBar fill={currentContentWidth}/>
+                    <div className="Resume-hr"/>
                     <p className="Resume-description">
                         Researched the design and synthesis of combinational feedback logic with FPGAs. In particular, 
                         I attempted to mitigate the complications that arise when modeling asynchronous combinational 
