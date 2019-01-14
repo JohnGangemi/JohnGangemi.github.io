@@ -4,8 +4,7 @@
   --nav-active-font-color: rgb(240, 240, 240);
   --active-font-color: rgb(63, 137, 205);
   --nav-font-size: 1rem;
-  --home-title-font-size: 3.4rem;
-  --home-description-font-size: 1.2rem;
+  --home-text-font-size: 1.6rem;
   --main-font-size: 1rem;
   --min-font-size: 0.9rem;
   --main-letter-space: 0.2rem;
@@ -17,11 +16,13 @@
 /* END CSS Vars */
 
 html {
+  height: 100%;
   width: 100%;
 }
 
 body {
   overflow-y: scroll;
+  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;

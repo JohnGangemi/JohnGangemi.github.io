@@ -7,8 +7,6 @@ import Resume from '../components/Resume.js';
 import Projects from '../components/Projects.js';
 import Contact from '../components/Contact.js';
 import Menu from '../components/Menu.js';
-import Theme from '../components/Theme.js';
-import Music from '../components/Music.js';
 import '../styles/App.css';
 
 class App extends Component {
@@ -21,8 +19,7 @@ class App extends Component {
 
     this.menuToogle = this.menuToogle.bind(this);
     this.menuClose = this.menuClose.bind(this);
-    this.setLightTheme = this.setLightTheme.bind(this);
-    this.setDarkTheme = this.setDarkTheme.bind(this);
+    this.themeToggle = this.themeToggle.bind(this);
   }
 
   menuToogle() {
@@ -35,12 +32,11 @@ class App extends Component {
     this.setState({isMenuOpen: false});
   }
 
-  setLightTheme() {
-    this.setState({appTheme: 'light'});
-  }
-
-  setDarkTheme() {
-    this.setState({appTheme: 'dark'});
+  themeToggle() {
+    const newTheme = this.state.appTheme === 'light' ? 'dark' : 'light';
+    this.setState({
+      appTheme: newTheme
+    })
   }
 
   render() {
@@ -48,9 +44,7 @@ class App extends Component {
 
     return (
       <div className={"App " + currentTheme}>
-        <Music/>
-        <Theme themes={{light: this.setLightTheme, dark: this.setDarkTheme}}/>
-        <Nav burger={this.menuToogle} />
+        <Nav burger={this.menuToogle} theme={this.themeToggle}/>
         <Menu action={{close: this.menuClose, open: this.state.isMenuOpen}} />
         <Switch>
           <Route exact path="/" component={Home}/>

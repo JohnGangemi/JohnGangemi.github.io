@@ -1,130 +1,76 @@
 .Home {
-  height: calc(100vh - 4rem);
+  min-height: calc(100vh - 4.4rem);
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-top: 4rem;
   color: inherit;
   
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "image content";
-  column-gap: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .Home-image {
-  grid-area: image;
-  align-self: center;
-  justify-self: end;
-  height: 500px;
-  width: 500px;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 4.4rem);
+  background-color: var(--main-bg-color);
+  background-image: url('../images/cpu.png');
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position: 70% 40%;
+  background-blend-mode: multiply;
 }
 
 .Home-content {
-  max-width: 500px;
-  grid-area: content;
-  align-self: center;
-  justify-self: start;
+  z-index: 1;
+  width: 600px;
 }
 
-.Home-title {
-  margin: 0;
-  padding: 0;
-  font-size: var(--home-title-font-size);
-  font-weight: 700;
-  letter-spacing: 0.4rem;
-  text-shadow: 4px 4px 6px var(--shadow-color);
+.Home-fill {
+  height: 0.2rem;
+  width: 25%;
+  margin-bottom: 0.5rem;
+  background-color: var(--main-font-color);
 }
 
-.Home-description {
-  margin-top: 2rem;
-}
-
-.Home-description > p {
+.Home-text {
+  width: 100%;
   margin: 0;
   margin-bottom: 1rem;
   padding: 0;
-  font-size: var(--home-description-font-size);
-  font-weight: 400;
+  font-size: var(--home-text-font-size);
+  color: inherit;
 }
 
-.Home-description > a:not(:last-child) {
+.Home-social a {
+  color: inherit;
+}
+
+.Home-social a:first-child {
   margin-right: 1rem;
 }
 
 .Home-icon {
-  color: var(--main-font-color);
+  cursor: pointer;
+  transition: color 0.4s ease;  
 }
 
 .Home-icon:hover {
   color: var(--active-font-color);
-  transition: color 0.4s;
 }
 
 @media screen and (max-width: 1199px) {
-  .Home {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "content"
-    "image";
-
-    grid-column-gap: 0;
-  }
-
-  .Home-content {
-    max-width: 375px;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .Home-image {
+  /* .Home-image {
     height: 325px;
     width: 325px;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .Home-title {
-    font-size: 2.4rem;
-    font-weight: 800;
-    text-shadow: none;
-  }
-
-  .Home-description {
-    margin-top: 1.5rem;
-  }
-
-  .Home-description > p {
-    font-size: var(--main-font-size);
-  }
+  } */
 }
 
 @media screen and (max-width: 799px) {
-  .Home-content {
-    max-width: 300px;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .Home-image {
+  /* .Home-image {
     height: 275px;
     width: 275px;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .Home-title {
-    font-size: 1.8rem;
-    font-weight: 800;
-    text-shadow: none;
-  }
-
-  .Home-description {
-    margin-top: 1rem;
-  }
-
-  .Home-description > p {
-    font-size: var(--min-font-size);
-  }
+  } */
 }

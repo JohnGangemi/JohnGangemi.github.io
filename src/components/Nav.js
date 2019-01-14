@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faAdjust } from '@fortawesome/free-solid-svg-icons';
 import '../styles/Nav.css';
 
 class Nav extends Component {
@@ -9,18 +10,12 @@ class Nav extends Component {
     return(
       <div className="Nav">
         <ul className="Nav-items">
-          <li><NavLink exact to='/' activeClassName="nav-active" className="Nav-item">home</NavLink></li>
-          <li><NavLink to='/about' activeClassName="nav-active" className="Nav-item">about</NavLink></li>
-          <li><NavLink to='/resume' activeClassName="nav-active" className="Nav-item">resume</NavLink></li>
-          <li><NavLink to='/projects' activeClassName="nav-active" className="Nav-item">projects</NavLink></li>
-          <li><NavLink to='/contact' activeClassName="nav-active" className="Nav-item">contact</NavLink></li>
+          <li><NavLink exact to='/' className="Nav-title">J.Gangemi</NavLink></li>
+          <li className="Nav-apps">
+            <FontAwesomeIcon className="Nav-icon" icon={faAdjust} onClick={this.props.theme}/>
+            <FontAwesomeIcon className="Nav-icon" icon={faBars} onClick={this.props.burger}/>
+          </li>
         </ul>
-        <div className="Nav-responsive-wrapper">
-          <div className="Nav-responsive" onClick={this.props.burger}>
-            <FontAwesomeIcon className="Nav-icon" icon={faChevronDown} size="lg"/>
-            menu
-          </div>
-        </div>
       </div>
     );
   }

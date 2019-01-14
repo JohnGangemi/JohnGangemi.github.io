@@ -1,12 +1,11 @@
 .Contact {
-    min-height: calc(100vh - 10rem);
+    min-height: calc(100vh - 4.4rem - 6rem - 2rem);
     width: 800px;
     margin: 0;
     padding: 0;
-    padding-top: 8rem;
+    padding-top: 6rem;
     padding-bottom: 2rem;
     color: inherit;
-    grid-area: content;
   }
 
 .Contact-title {

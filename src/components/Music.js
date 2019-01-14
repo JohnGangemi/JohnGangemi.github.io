@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMusic } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faPause } from '@fortawesome/free-solid-svg-icons'
+import { faVolumeUp } from '@fortawesome/free-solid-svg-icons'
 import Song from '../audio/song.mp3';
 import '../styles/Music.css';
 
@@ -8,48 +10,90 @@ class Music extends Component {
     constructor(props) {
         super(props);
 
-        this.musicRef = React.createRef();
         this.state = {
-            visible: false
-        }
+            play: false,
+            volume: 50,
+            time: 0
+        };
 
-        this.toggleVisibility = this.toggleVisibility.bind(this);
-        this.handleClickOutside = this.handleClickOutside.bind(this);
+        this.audio = new Audio(Song);
+        this.audio.preload = 'metadata';
+        this.audio.volume = this.state.volume / 100;
+
+        this.playAudio = this.playAudio.bind(this);
+        this.pauseAudio = this.pauseAudio.bind(this);
+        this.muteAudio = this.muteAudio.bind(this);
+        this.setVolume = this.setVolume.bind(this);
+        this.calculatePlaybackPosition = this.calculatePlaybackPosition.bind(this);
     }
 
     componentDidMount() {
-        document.addEventListener('mousedown', this.handleClickOutside);
+        this.audio.addEventListener("timeupdate", this.calculatePlaybackPosition);
     }
-    
+
     componentWillUnmount() {
-        document.removeEventListener('mousedown', this.handleClickOutside);
+        this.audio.removeEventListener("timeupdate");
     }
 
-    toggleVisibility() {
-        this.setState(state => ({
-            visible: !state.visible
-        }));
-    }
+    playAudio() {
+        if (!this.state.play) {
+            this.setState({
+                play: true
+            });
 
-    handleClickOutside(event) {
-        if (this.state.visible) {
-            if (this.musicRef && !this.musicRef.current.contains(event.target)) {
-                this.toggleVisibility();
-            }
+            this.audio.play();
         }
     }
 
+    pauseAudio() {
+        if (this.state.play) {
+            this.setState({
+                play: false
+            });
+
+            this.audio.pause();
+        }
+    }
+
+    muteAudio() {
+        this.audio.volume = 0.0;
+        this.setState({
+            volume: 0
+        });
+    }
+
+    setVolume(event) {
+        const newVolume = event.target.value;
+        this.audio.volume = newVolume / 100;
+        this.setState({
+            volume: newVolume
+        });
+    }
+
+    calculatePlaybackPosition() {
+        this.setState({
+            time: ((this.audio.currentTime / this.audio.duration) * 100)
+        });
+    }
+
     render() {
-        const visible = this.state.visible;
+        const timelineStyle = {
+            width: `${this.state.time}%`
+        };
 
         return(
-            <div className={visible ? "Music show-music" : "Music"} ref={this.musicRef}>
-                <div className="Music-content">
-                    <p className="Music-track">sample of my music</p>
-                    <audio src={Song} controls preload="metadata"/>
-                </div>
-                <div className="Music-bumper" onClick={this.toggleVisibility}>
-                    <FontAwesomeIcon className="Music-icon" icon={faMusic} size="lg"/>
+            <div className="Music">
+                <div className="Music-timeline" style={timelineStyle} />
+                <div className="Music-controls">
+                    <div className="Music-play">
+                        {
+                            this.state.play ? 
+                            <FontAwesomeIcon className="Music-control" icon={faPause} size="lg" onClick={this.pauseAudio}/> : 
+                            <FontAwesomeIcon className="Music-control" icon={faPlay} size="lg" onClick={this.playAudio}/>
+                        }
+                    </div>
+                    <FontAwesomeIcon icon={faVolumeUp} size="1x"/>
+                    <input className="Music-slider" type="range" min="0" max="100" defaultValue={this.state.volume} onChange={this.setVolume}/>
                 </div>
             </div>
         );
