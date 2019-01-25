@@ -1,9 +1,7 @@
 .Card {
     margin: 0;
     padding: 1rem;
-    width: 14rem;
     background-color: var(--background-secondary);
-    box-shadow: 2px 4px 6px var(--shadow);
     color: var(--font-secondary);
 
     display: flex;
@@ -20,11 +18,11 @@
 }
 
 .Card-title {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .Card-description {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     text-align: left;
     font-size: 16px;
     line-height: 20px;

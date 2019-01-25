@@ -22,7 +22,7 @@ class About extends Component {
             hard work and determination.
           </p>
           <div className="About-slides">
-            <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <ScrollAnimation animateIn="zoomIn" animateOnce={true} duration={0.8}>
               <div className="About-slide">
                 <img src={laptop} alt="Laptop"/>
                 <div className="About-slide-content">
@@ -32,7 +32,7 @@ class About extends Component {
               </div>
             </ScrollAnimation>
             <div className="About-slides-spacer"/>
-            <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+            <ScrollAnimation animateIn="zoomIn" animateOnce={true} duration={0.8}>
               <div className="About-slide">
                 <div className="About-slide-content">
                   <h4>Musician</h4>
@@ -42,7 +42,7 @@ class About extends Component {
               </div>
             </ScrollAnimation>
             <div className="About-slides-spacer"/>
-            <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+            <ScrollAnimation animateIn="zoomIn" animateOnce={true} duration={0.8}>
               <div className="About-slide">
                 <img src={ram} alt="Computer Memory"/>
                 <div className="About-slide-content">
