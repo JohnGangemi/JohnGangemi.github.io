@@ -1,52 +1,54 @@
 .Resume {
-  min-height: calc(100vh - 4.4rem - 6rem - 2rem);
-  width: 800px;
+  width: 100%;
   margin: 0;
   padding: 0;
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  color: inherit;
+  background-color: var(--background-secondary);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Resume-title {
-  margin: 0;
-  padding: 0;
-  font-size: var(--main-font-size);
-  font-weight: 700;
-  color: inherit;
+.Resume-wrapper {
+  max-width: 36rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.Resume-tag {
+  margin-left: -10rem;
+  margin-bottom: 2rem;
+  color: var(--highlight);
 }
 
 .Resume-hr {
   height: 2px;
-  background-color: var(--active-font-color);
-}
-
-.Resume-description {
-  margin: 0;
-  margin-top: 1rem;
-  padding: 0;
-  font-size: var(--main-font-size);
-  color: inherit;
+  margin-bottom: 1rem;
+  background-color: var(--highlight);
 }
 
 .Resume-spacer-vertical {
   height: 3rem;
 }
   
-@media screen and (max-width: 1199px) {
-  .Resume {
-    max-width: 600px;
+@media screen and (max-width: 1000px) {
+  .Resume-wrapper {
+    max-width: 28rem;
+  }
+
+  .Resume-tag {
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 799px) {
-  .Resume {
-    max-width: 400px;
+  .Resume-wrapper {
+    max-width: 20rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
-}
 
-@media screen and (max-width: 599px) {
-  .Resume {
-    max-width: 300px;
+  .Resume-tag {
+    margin-bottom: 1.5rem;
   }
 }

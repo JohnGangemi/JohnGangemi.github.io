@@ -1,36 +1,31 @@
 .Card {
     margin: 0;
-    padding: 0.5rem;
-    width: 200px;
-    background-color: var(--card-background-color);
-    box-shadow: 4px 4px 8px var(--shadow-color);
+    padding: 1rem;
+    width: 14rem;
+    background-color: var(--background-secondary);
+    box-shadow: 2px 4px 6px var(--shadow);
+    color: var(--font-secondary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Card-image {
-    margin: 0;
-    padding: 0;
-    width: inherit;
+    width: 10rem;
+    height: 10rem;
+    margin-top: -4rem;
+    border: 6px solid var(--font-primary);
+    border-radius: 50%;
 }
 
 .Card-title {
-    margin: 0;
     margin-top: 1rem;
-    padding: 0;
-    font-size: var(--min-font-size);
-    font-weight: 700;
-    color: var(--main-font-color);
 }
 
 .Card-description {
-    margin: 0;
-    margin-top: 0.5rem;
-    padding: 0;
-    font-size: var(--min-font-size);
-    color: var(--main-font-color);
-}
-
-@media screen and (max-width: 799px) {
-    .Card {
-        width: 225px;
-    }
+    margin-top: 1.5rem;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
 }

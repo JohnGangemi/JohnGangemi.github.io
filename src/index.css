@@ -1,17 +1,12 @@
 /* CSS Vars */
 :root {
-  --main-font-color: rgb(40,40,40);
-  --nav-active-font-color: rgb(240, 240, 240);
-  --active-font-color: rgb(63, 137, 205);
-  --nav-font-size: 1rem;
-  --home-text-font-size: 1.6rem;
-  --main-font-size: 1rem;
-  --min-font-size: 0.9rem;
-  --main-letter-space: 0.2rem;
-  --main-bg-color: rgb(235, 235, 235);
-  --nav-hover-color: rgb(210, 210, 210);
-  --shadow-color: rgb(190, 190, 190);
-  --card-background-color: #FFF;
+  --font-primary: #ffffff;
+  --font-secondary: #272f30;
+  --background-primary: #5F6667;
+  --background-secondary: #ededed;
+  --background-dark: #383F40;
+  --highlight: #DCBA6C;
+  --shadow: rgb(50, 50, 50, 0.5);
 }
 /* END CSS Vars */
 
@@ -21,12 +16,11 @@ html {
 }
 
 body {
-  overflow-y: scroll;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Roboto", "Oxygen",
+  font-family: "Montserrat", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -36,4 +30,88 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather";
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather";
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 799px) {
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  a {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

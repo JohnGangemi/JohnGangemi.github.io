@@ -1,39 +1,55 @@
 .Projects {
-  min-height: calc(100vh - 4.4rem - 6rem - 2rem);
-  width: 800px;
+  width: 100%;
   margin: 0;
   padding: 0;
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  color: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Projects-wrapper {
+  width: 36rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.Projects-tag {
+  margin-left: -10rem;
+  margin-bottom: 5rem;
+  color: var(--highlight);
 }
 
 .Projects-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   justify-items: center;
-  row-gap: 2rem;
-  column-gap: 2rem;
+  row-gap: 8rem;
+  column-gap: 4rem;
 }
 
-@media screen and (max-width: 1199px) {
-  .Projects {
-    min-width: 600px;
+@media screen and (max-width: 1000px) {
+  .Projects-wrapper {
+    width: 28rem;
+  }
+
+  .Projects-tag {
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 799px) {
-  .Projects {
-    min-width: 400px;
+  .Projects-wrapper {
+    width: 20rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
-}
 
-@media screen and (max-width: 599px) {
-  .Projects {
-    min-width: 300px;
+  .Projects-tag {
+    margin-bottom: 4rem;
   }
 
   .Projects-cards {
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    row-gap: 6rem;
   }
 }

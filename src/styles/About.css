@@ -1,48 +1,120 @@
 .About {
-  min-height: calc(100vh - 4.4rem - 6rem - 2rem);
-  width: 800px;
+  width: 100%;
   margin: 0;
   padding: 0;
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  color: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.About-wrapper {
+  max-width: 36rem;
+  margin-top: 14rem;
+  margin-bottom: 7rem;
+}
+
+.About-tag {
+  margin-left: -8rem;
+  margin-bottom: 2rem;
+  color: var(--highlight);
 }
 
 .About-text {
-  margin: 0;
-  padding: 0;
-  font-size: var(--main-font-size);
+  color: var(--font-secondary);
+}
+
+.About-slides {
+  margin-top: 6rem;
+}
+
+.About-slides-spacer {
+  margin-bottom: 3rem;
+}
+
+.About-slide {
+  max-height: 8rem;
+  padding: 0 1rem;
+  background-color: var(--background-secondary);
+  color: var(--font-secondary);
+  box-shadow: 2px 4px 6px var(--shadow);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.About-slide img {
+  width: 10rem;
+  height: 10rem;
+  border: 6px solid var(--font-primary);
+  border-radius: 50%;
+}
+
+.About-slide-content {
+  padding: 1rem;
+}
+
+.About-slide-content h4 {
   color: inherit;
+  margin-bottom: 0.5rem;
 }
 
-.About-cards {
-  margin-top: 4rem;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  justify-items: center;
-  row-gap: 2rem;
-  column-gap: 2rem;
+.About-slide-content p {
+  color: inherit;
+  font-size: 16px;
+  line-height: 20px;
 }
 
-@media screen and (max-width: 1199px) {
-  .About {
-    max-width: 600px;
+@media screen and (max-width: 1000px) {
+  .About-wrapper {
+    max-width: 28rem;
+  }
+
+  .About-tag {
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 799px) {
-  .About {
-    max-width: 400px;
-  }
-}
-
-@media screen and (max-width: 599px) {
-  .About {
-    max-width: 300px;
+  .About-wrapper {
+    max-width: 20rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
   }
 
-  .About-cards {
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  .About-tag {
+    margin-bottom: 1.5rem;
+  }
+
+  .About-slides {
+    margin-top: 4rem;
+  }
+  
+  .About-slide {
+    max-height: 6rem;
+  }
+
+  .About-slide img {
+    width: 6.5rem;
+    height: 6.5rem;
+    border: 4px solid var(--font-primary);
+    border-radius: 50%;
+  }
+
+  .About-slide-content {
+    padding: 0.5rem;
+  }
+
+  .About-slide-content h4 {
+    color: inherit;
+    margin-bottom: 0.1rem;
+    font-size: 16px;
+  }
+  
+  .About-slide-content p {
+    color: inherit;
+    font-size: 12px;
+    line-height: 16px;
   }
 }

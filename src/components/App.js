@@ -1,59 +1,88 @@
 import React, { Component } from 'react';
-import {Switch, Route, Redirect} from 'react-router-dom';
-import Nav from '../components/Nav.js';
 import Home from '../components/Home.js';
 import About from '../components/About.js';
 import Resume from '../components/Resume.js';
 import Projects from '../components/Projects.js';
 import Contact from '../components/Contact.js';
-import Menu from '../components/Menu.js';
+import Reset from '../components/Reset.js';
 import '../styles/App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      isMenuOpen: false,
-      appTheme: 'light'
+      showReset: false,
+      windowHeight: 0,
+      previousYOffset: 0,
+      scrollThrottle: 75,
+      intervalId: 0
     };
 
-    this.menuToogle = this.menuToogle.bind(this);
-    this.menuClose = this.menuClose.bind(this);
-    this.themeToggle = this.themeToggle.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.scrollStep = this.scrollStep.bind(this);
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
-  menuToogle() {
-    this.setState(state => ({
-      isMenuOpen: !state.isMenuOpen
-    }));
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.updateWindowDimensions);
   }
 
-  menuClose() {
-    this.setState({isMenuOpen: false});
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
-  themeToggle() {
-    const newTheme = this.state.appTheme === 'light' ? 'dark' : 'light';
-    this.setState({
-      appTheme: newTheme
-    })
+  handleScroll(event) {
+    var previousOffset = this.state.previousYOffset;
+    var currentOffset = window.pageYOffset;
+    var maxOffset = this.state.windowHeight;
+    console.log(maxOffset);
+
+    if (Math.abs(currentOffset - previousOffset) > this.state.scrollThrottle) {
+      var trigger = (currentOffset > maxOffset && currentOffset < previousOffset) ? true : false;
+
+      if (trigger !== this.state.showReset) {
+        this.setState({
+          showReset: trigger,
+          previousYOffset: currentOffset
+        });
+      } else {
+        this.setState({
+          previousYOffset: currentOffset
+        });
+      }
+    }
+  }
+
+  updateWindowDimensions() {
+    this.setState({ windowHeight: window.innerHeight });
+  }
+
+  scrollStep() {
+    if (window.pageYOffset === 0) {
+        clearInterval(this.state.intervalId);
+    }
+    window.scroll(0, window.pageYOffset - 100);
+  }
+  
+  scrollToTop() {
+    let intervalId = setInterval(this.scrollStep, 2.0);
+    this.setState({ intervalId: intervalId });
   }
 
   render() {
-    const currentTheme = this.state.appTheme;
-
     return (
-      <div className={"App " + currentTheme}>
-        <Nav burger={this.menuToogle} theme={this.themeToggle}/>
-        <Menu action={{close: this.menuClose, open: this.state.isMenuOpen}} />
-        <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
-          <Route path="/resume" component={Resume}/>
-          <Route path="/projects" component={Projects}/>
-          <Route path="/contact" component={Contact}/>
-          <Redirect to="/"/>
-        </Switch>
+      <div className="App">
+        <Home/>
+        <About/>
+        <Resume/>
+        <Projects/>
+        <Contact/>
+        <Reset show={this.state.showReset} scrollUp={this.scrollToTop}/>
       </div>
     );
   }
