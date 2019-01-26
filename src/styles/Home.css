@@ -17,9 +17,16 @@
 }
 
 .Home-image {
-  margin-bottom: -125px;
+  margin-bottom: -130px;
   width: 275px;
   height: auto;
+  cursor: pointer;
+  transform: rotateY(0deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+.Home-image:hover {
+  transform: rotateY(15deg);
 }
 
 .Home-title {

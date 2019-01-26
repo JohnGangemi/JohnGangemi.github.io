@@ -25,7 +25,9 @@ class Home extends Component {
             </a>
           </div>
         </div>
-        <img className="Home-image" src={quantum} alt="Google's Quantum Computer"/>
+        <a href="https://ai.google/research/teams/applied-science/quantum-ai/">
+          <img className="Home-image" src={quantum} alt="Google's Quantum Computer"/>
+        </a>
       </div>
     );
   }
