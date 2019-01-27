@@ -54,10 +54,10 @@
     height: 1rem;
 }
 
-@media screen and (max-width: 999px) {
-    .Contact-wrapper {
+@media screen and (max-width: 1000px) {
+    /* .Contact-wrapper {
         width: 28rem;
-    }
+    } */
 
     .Contact-tag {
         margin-left: 0;

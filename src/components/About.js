@@ -17,9 +17,7 @@ class About extends Component {
             and hardware systems on a daily basis as a Recording Engineer
             encouraged the pursuit of another career path. 
             <br/><br/>
-            Once enrolled into the University of South Florida, I obtained a B.S. 
-            in Computer Engineering after four exhausting but rewarding years of 
-            hard work and determination.
+            I obtained a Bachelor of Science in Computer Engineering from the University of South Florida.
           </p>
           <div className="About-slides">
             <ScrollAnimation animateIn="zoomIn" animateOnce={true} duration={0.8}>
@@ -27,7 +25,7 @@ class About extends Component {
                 <img src={laptop} alt="Laptop"/>
                 <div className="About-slide-content">
                   <h4>Programmer</h4>
-                  <p>Honing skills through personal software and hardware projects.</p>
+                  <p>Refining skills through software and hardware projects.</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -36,7 +34,7 @@ class About extends Component {
               <div className="About-slide">
                 <div className="About-slide-content">
                   <h4>Musician</h4>
-                  <p>Life-long musician and graduate Recording Engineer (FullSail University, 2007).</p>
+                  <p>Life-long musician and graduate Recording Engineer (FullSail, 2007).</p>
                 </div>
                 <img src={strat} alt="Stratocaster Guitar"/>
               </div>
@@ -46,8 +44,8 @@ class About extends Component {
               <div className="About-slide">
                 <img src={ram} alt="Computer Memory"/>
                 <div className="About-slide-content">
-                  <h4>Tech</h4>
-                  <p>Computer enthusiast who enjoys building PCs and pushing the limits of the hardware.</p>
+                  <h4>Enthusiast</h4>
+                  <p>Following the latest achievements in technology.</p>
                 </div>
               </div>
             </ScrollAnimation>

@@ -32,9 +32,9 @@
 }
   
 @media screen and (max-width: 1000px) {
-  .Resume-wrapper {
+  /* .Resume-wrapper {
     max-width: 28rem;
-  }
+  } */
 
   .Resume-tag {
     margin-left: 0;

@@ -1,8 +1,8 @@
 .Reset {
     z-index: 200;
     position: fixed;
-    bottom: 2rem;
-    right: 4rem;
+    top: 2rem;
+    right: 2rem;
     cursor: pointer;
 
     transform: translateX(8rem);
@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 799px) {
     .Reset {
-        bottom: 1rem;
+        top: 1rem;
         right: 1rem;
     }
 

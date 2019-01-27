@@ -30,9 +30,9 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .Projects-wrapper {
+  /* .Projects-wrapper {
     width: 28rem;
-  }
+  } */
 
   .Projects-tag {
     margin-left: 0;
