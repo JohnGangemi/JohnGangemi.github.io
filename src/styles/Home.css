@@ -17,9 +17,9 @@
 }
 
 .Home-image {
-  margin-bottom: -130px;
-  width: 275px;
-  height: auto;
+  margin-bottom: -210px;
+  height: 420px;
+  width: auto;
   cursor: pointer;
   transform: rotateY(0deg);
   transition: transform 0.4s ease-in-out;
@@ -58,13 +58,13 @@
 @media screen and (max-width: 799px) {
   .Home-wrapper {
     max-width: 20rem;
-    margin-top: 4rem;
-    margin-bottom: 2.5rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
   
   .Home-image {
-    margin-bottom: -100px;
-    width: 180px;
-    height: auto;
+    margin-bottom: -120px;
+    height: 240px;
+    width: auto;
   }
 }

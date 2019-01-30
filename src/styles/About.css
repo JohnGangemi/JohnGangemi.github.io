@@ -10,7 +10,7 @@
 
 .About-wrapper {
   max-width: 36rem;
-  margin-top: 14rem;
+  margin-top: 18.5rem;
   margin-bottom: 7rem;
 }
 
@@ -80,7 +80,7 @@
 @media screen and (max-width: 799px) {
   .About-wrapper {
     max-width: 20rem;
-    margin-top: 10rem;
+    margin-top: 13.5rem;
     margin-bottom: 5rem;
   }
 
