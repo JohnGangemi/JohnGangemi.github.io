@@ -1,9 +1,12 @@
 .Card {
-    margin: 0;
-    padding: 1rem;
+    margin: 0 1rem;
+    padding: 0;
+    width: calc(100% - 2rem);
+    height: auto;
     background-color: var(--background-secondary);
     color: var(--font-secondary);
 
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,9 +22,11 @@
 
 .Card-title {
     margin-top: 2rem;
+    padding: 0 1rem;
 }
 
 .Card-description {
     margin-top: 0.5rem;
+    padding: 0 1rem 1rem 1rem;
     text-align: left;
 }

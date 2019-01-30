@@ -17,7 +17,9 @@ class About extends Component {
             and hardware systems on a daily basis as a Recording Engineer
             encouraged the pursuit of another career path. 
             <br/><br/>
-            I obtained a Bachelor of Science in Computer Engineering from the University of South Florida.
+            I obtained a Bachelor of Science in Computer Engineering from the 
+            University of South Florida in 2016 and have been gainfully employed 
+            as a Software Engineer.
           </p>
           <div className="About-slides">
             <ScrollAnimation animateIn="zoomIn" animateOnce={true} duration={0.8}>

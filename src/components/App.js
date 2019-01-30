@@ -40,7 +40,6 @@ class App extends Component {
     var previousOffset = this.state.previousYOffset;
     var currentOffset = window.pageYOffset;
     var maxOffset = this.state.windowHeight;
-    console.log(maxOffset);
 
     if (Math.abs(currentOffset - previousOffset) > this.state.scrollThrottle) {
       var trigger = (currentOffset > maxOffset && currentOffset < previousOffset) ? true : false;

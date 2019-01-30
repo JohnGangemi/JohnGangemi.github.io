@@ -25,7 +25,7 @@
 }
 
 .About-slides {
-  margin-top: 6rem;
+  margin-top: 7rem;
 }
 
 .About-slides-spacer {
@@ -62,6 +62,8 @@
 
 .About-slide-content p {
   color: inherit;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -87,7 +89,7 @@
   }
 
   .About-slides {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 
   .About-slides-spacer {
@@ -107,7 +109,7 @@
 
   .About-slide-content h4 {
     margin-bottom: 0.2rem;
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .About-slide-content p {

@@ -16,17 +16,8 @@
 
 .Projects-tag {
   margin-left: -10rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   color: var(--highlight);
-}
-
-.Projects-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  justify-items: center;
-  align-items: start;
-  row-gap: 8rem;
-  column-gap: 4rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -47,10 +38,6 @@
   }
 
   .Projects-tag {
-    margin-bottom: 4rem;
-  }
-
-  .Projects-cards {
-    row-gap: 6rem;
+    margin-bottom: 1.5rem;
   }
 }
