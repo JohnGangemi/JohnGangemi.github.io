@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Callout from '../components/Callout.js';
 import laptop from '../images/laptop.png';
 import strat from '../images/strat.png';
 import ram from '../images/ram.png';
@@ -21,35 +22,26 @@ class About extends Component {
             University of South Florida in 2016 and have been gainfully employed 
             as a Software Engineer.
           </p>
-          <div className="About-slides">
+          <div className="About-callout">
             <ScrollAnimation animateIn="zoomIn" animateOnce={true} duration={0.8}>
-              <div className="About-slide">
-                <img src={laptop} alt="Laptop"/>
-                <div className="About-slide-content">
-                  <h4>Programmer</h4>
-                  <p>Refining skills through software and hardware projects.</p>
-                </div>
-              </div>
+              <Callout direction="right" 
+                image={laptop} 
+                imageAlt="Laptop" 
+                text={{title:"Programmer", description:"Refining skills through software and hardware projects."}}/>
             </ScrollAnimation>
-            <div className="About-slides-spacer"/>
+            <div className="About-callout-spacer"/>
             <ScrollAnimation animateIn="zoomIn" animateOnce={true} duration={0.8}>
-              <div className="About-slide">
-                <div className="About-slide-content">
-                  <h4>Musician</h4>
-                  <p>Life-long musician and graduate Recording Engineer (FullSail, 2007).</p>
-                </div>
-                <img src={strat} alt="Stratocaster Guitar"/>
-              </div>
+              <Callout direction="left" 
+                image={strat} 
+                imageAlt="Stratocaster Guitar" 
+                text={{title:"Musician", description:"Life-long musician and graduate Recording Engineer (FullSail, 2007)."}}/>
             </ScrollAnimation>
-            <div className="About-slides-spacer"/>
+            <div className="About-callout-spacer"/>
             <ScrollAnimation animateIn="zoomIn" animateOnce={true} duration={0.8}>
-              <div className="About-slide">
-                <img src={ram} alt="Computer Memory"/>
-                <div className="About-slide-content">
-                  <h4>Enthusiast</h4>
-                  <p>Following the latest achievements in technology.</p>
-                </div>
-              </div>
+              <Callout direction="right" 
+                image={ram} 
+                imageAlt="Computer Memory" 
+                text={{title:"Enthusiast", description:"Following the latest advancements in technology."}}/>
             </ScrollAnimation>
           </div>
         </div>
